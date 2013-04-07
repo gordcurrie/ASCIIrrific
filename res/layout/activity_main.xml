@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="@color/grey"
+    tools:context=".MainActivity" >
+    
+    <com.currie.asciirrific.AsciiView
+        android:id="@+id/asciiView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+    
+    <com.currie.asciirrific.PreviewView
+        android:id="@+id/preview"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:onClick="hidePreview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/shutterButton"
+        android:contentDescription="@string/shutter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:src="@drawable/btn_camera_shutter_holo"
+        android:background="@android:color/transparent"
+        android:onClick="takePicture" />
+
+    <ImageButton
+        android:id="@+id/switchCamera"
+        android:contentDescription="@string/shutter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/shutterButton"
+        android:layout_alignTop="@+id/preview"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_switch_photo_facing_holo_light"
+        android:onClick="switchCameras" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:contentDescription="@string/shutter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/shutterButton"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="shareApp"
+        android:src="@android:drawable/ic_menu_share" />
+
+    <ImageButton
+        android:id="@+id/changeFontSize"
+        android:contentDescription="@string/shutter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/shareButton"
+        android:layout_alignLeft="@+id/preview"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_change_font_size"
+        android:onClick="changeFontSize" />
+
+</RelativeLayout>
