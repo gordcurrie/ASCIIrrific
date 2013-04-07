@@ -1,6 +1,7 @@
 package com.currie.asciirrific;
 
 import java.io.File;
+import java.util.Arrays;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -39,6 +40,7 @@ public class ViewImageActivity extends Activity implements OnGestureListener {
         if (images.length % 3 == 0) {
             showUpgradeDialog();
         }
+        Arrays.sort(images);
         // sets the image to the last picture taken
         bitmap = BitmapFactory.decodeFile(images[images.length - 1].getAbsolutePath());
         imageView.setImageBitmap(bitmap);
